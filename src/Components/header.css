@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.header span {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 100px;
+  margin-top: 10px;
+}
+.header img {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+.header img:hover {
+  cursor: pointer;
+}

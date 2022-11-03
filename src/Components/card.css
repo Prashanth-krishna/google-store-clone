@@ -1,0 +1,19 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 400px;
+  width: 100%;
+  /* text-align: center; */
+}
+.card img {
+  height: 50%;
+  width: 90%;
+  margin-bottom: 10px;
+}
+.card span {
+  /* margin-top: 10px; */
+  width: 100%;
+  /* font-size: 12px; */
+}
