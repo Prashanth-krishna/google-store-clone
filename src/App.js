@@ -1,8 +1,18 @@
+import Header from "./Components/header";
+import "./App.css";
+import SideBar from "./Components/sidebar";
+import Products from "./Components/products";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">Hello</header>
-      <p>Happy Hacking</p>
+      <Header />
+      <aside>
+        <SideBar />
+      </aside>
+      <main>
+        <Products />
+      </main>
     </div>
   );
 }
