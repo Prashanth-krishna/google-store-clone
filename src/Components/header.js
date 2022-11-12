@@ -5,19 +5,24 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import GoogleIcon from "@mui/icons-material/Google";
 
 import "./header.css";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className="header" id="header">
-      <div className="store">
-        <GoogleIcon />
-        <span>Store</span>
-      </div>
+      <Link to="/" style={{ fill: "black", textDecoration: "none" }}>
+        <div className="store">
+          <GoogleIcon />
+          <span>Store</span>
+        </div>
+      </Link>
 
       <div className="optionsContainer">
         <SearchIcon />
         <HelpIcon />
         <AccountCircleIcon />
-        <ShoppingCartIcon />
+        <Link to="/Checkout" style={{ fill: "black" }}>
+          <ShoppingCartIcon />
+        </Link>
       </div>
     </div>
   );
