@@ -1,10 +1,11 @@
 // import { useRef, useState } from "react";
 import "./sidebar.css";
+let selected = [" ", " "];
 function SideBar(props) {
   // const [selected, SetSelected] = useState(["", ""]);
   // const phoneref = useRef();
   // const homeref = useRef();
-  let selected = [" ", " "];
+
   const onclickHandler = (e) => {
     const { id, checked } = e.target;
     // console.log(id, checked);
@@ -48,7 +49,7 @@ function SideBar(props) {
           // ref={homeref}
           onClick={onclickHandler}
         />
-        <label htmlFor="home">Connected home</label>
+        <label htmlFor="home">Connected Home</label>
       </div>
       <div className="phone">
         <input

@@ -72,23 +72,28 @@ const All_Products = [
     type: "phone",
   },
 ];
-// const images = All_Products.map((item) => {
-//   return (
-//     <>
-//       <img
-//         key={item.name}
-//         src={require(`./../assets/products/${item.src}`)}
-//         alt={item.name}
-//       />
-//       <span>{item.name}</span>
-//     </>
-//   );
-// });
-function Products() {
-  return All_Products.map((item) => {
-    return (
-      <Card src={item.src} name={item.name} key={item.id} type={item.type} />
-    );
-  });
+
+function Products({ selected }) {
+  if (selected.includes("home") || selected.includes("phone")) {
+    return All_Products.map((item) => {
+      if (selected.includes(item.type)) {
+        return (
+          <Card
+            src={item.src}
+            name={item.name}
+            key={item.id}
+            type={item.type}
+          />
+        );
+      }
+    });
+  } else {
+    return All_Products.map((item) => {
+      return (
+        <Card src={item.src} name={item.name} key={item.id} type={item.type} />
+      );
+    });
+  }
 }
+
 export default Products;

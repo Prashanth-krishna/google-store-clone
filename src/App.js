@@ -5,10 +5,9 @@ import SideBar from "./Components/sidebar";
 import Products from "./Components/products";
 
 function App() {
-  const [selected, SetSelected] = useState(["", ""]);
+  const [selected, SetSelected] = useState([]);
   const allselected = (select) => {
     SetSelected(select);
-    console.log(selected);
   };
   return (
     <div className="App">
