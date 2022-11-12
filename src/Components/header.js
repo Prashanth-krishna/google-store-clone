@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className="header" id="header">
-      <Link to="/" style={{ fill: "black", textDecoration: "none" }}>
+      <Link to="/" style={{ color: "black", textDecoration: "none" }}>
         <div className="store">
           <GoogleIcon />
           <span>Store</span>
@@ -20,7 +20,7 @@ function Header() {
         <SearchIcon />
         <HelpIcon />
         <AccountCircleIcon />
-        <Link to="/Checkout" style={{ fill: "black" }}>
+        <Link to="/Checkout" style={{ color: "black" }}>
           <ShoppingCartIcon />
         </Link>
       </div>

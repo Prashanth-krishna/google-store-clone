@@ -12,6 +12,11 @@
   width: 90%;
   margin-bottom: 10px;
 }
+.card img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
 .card span {
   /* margin-top: 10px; */
   width: 100%;
