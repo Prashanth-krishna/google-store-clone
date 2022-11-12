@@ -1,18 +1,23 @@
-import searchImg from "../assets/search.png";
-import helpImg from "../assets/help.png";
-import cartImg from "../assets/cart.png";
-import profileImg from "../assets/profile.png";
+import SearchIcon from "@mui/icons-material/Search";
+import HelpIcon from "@mui/icons-material/Help";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import GoogleIcon from "@mui/icons-material/Google";
 
 import "./header.css";
 function Header() {
   return (
     <div className="header" id="header">
-      <span>Store</span>
+      <div className="store">
+        <GoogleIcon />
+        <span>Store</span>
+      </div>
+
       <div className="optionsContainer">
-        <img src={searchImg} alt="search items" />
-        <img src={helpImg} alt="help" />
-        <img src={cartImg} alt="your cart" />
-        <img src={profileImg} alt="profile" />
+        <SearchIcon />
+        <HelpIcon />
+        <AccountCircleIcon />
+        <ShoppingCartIcon />
       </div>
     </div>
   );
