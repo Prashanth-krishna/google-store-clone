@@ -121,7 +121,7 @@ function App() {
           path="/Checkout"
           element={
             <>
-              <Header /> <Checkout />
+              <Header /> <Checkout products={All_Products} />
             </>
           }
         />

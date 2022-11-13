@@ -13,8 +13,6 @@ function Products({ selected, products }) {
             type={item.type}
           />
         );
-      } else {
-        return <></>;
       }
     });
   } else {

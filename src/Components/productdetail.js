@@ -9,8 +9,7 @@ function ProductDetail(props) {
   const id = params.id;
   const isInShoppingCart = CartCTX.isInCart(id);
   //   console.log(isInShoppingCart);
-  // eslint-disable-next-line
-  let product = props.products.filter((item) => item.id == id);
+  let product = props.products.filter((item) => item.id.toString() === id);
   function AddToCartHandler() {
     CartCTX.addToCart({
       id: id,

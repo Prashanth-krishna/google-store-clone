@@ -26,13 +26,18 @@ function SideBar(props) {
         <input
           type="checkbox"
           id="home"
-          value="home"
-          onClick={onclickHandler}
+          checked={selected[0] !== " "}
+          onChange={onclickHandler}
         />
         <label htmlFor="home">Connected Home</label>
       </div>
       <div className="phone">
-        <input type="checkbox" id="phones" onClick={onclickHandler} />
+        <input
+          type="checkbox"
+          id="phones"
+          checked={selected[1] !== " "}
+          onChange={onclickHandler}
+        />
         <label htmlFor="phones">Phones</label>
       </div>
     </div>

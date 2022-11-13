@@ -1,0 +1,20 @@
+.checkoutContainer {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  /* text-align: start; */
+}
+.checkoutContainer img {
+  margin-left: 10px;
+  height: 100px;
+  width: 100px;
+}
+.products {
+  display: flex;
+  margin: 10px 10px;
+}
+.products p {
+  margin: 10px 10px;
+  align-items: center;
+}
