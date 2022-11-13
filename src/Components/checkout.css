@@ -1,7 +1,7 @@
 .checkoutContainer {
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   flex-direction: column;
   /* text-align: start; */
 }
@@ -13,8 +13,39 @@
 .products {
   display: flex;
   margin: 10px 10px;
+  justify-content: center;
+  align-items: stretch;
+  justify-content: space-between;
 }
 .products p {
   margin: 10px 10px;
   align-items: center;
+}
+.checkoutEmptyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+.checkoutEmptyContainer button {
+  margin: 20px 5px;
+  background-color: rgb(50, 139, 241);
+  color: white;
+  border: none;
+}
+.checkoutEmptyContainer button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+.products .description {
+  display: flex;
+  flex-direction: column;
+}
+.products .total {
+  display: flex;
+  flex-direction: column;
+}
+.products .quantity > * {
+  margin: 10px 5px;
 }

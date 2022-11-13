@@ -10,7 +10,7 @@ const All_Products = [
   {
     id: 1,
     name: "C to C Charging Cable",
-    price: 1,
+    price: 9,
     src: "ctoc.png",
     type: "phone",
     shortDescription: "Quick and powerful.",
@@ -20,7 +20,7 @@ const All_Products = [
   {
     id: 2,
     name: "C to 3.5mm Dongle",
-    price: 1,
+    price: 9,
     src: "cto3.5mm.png",
     type: "phone",
     shortDescription: "Sleek, seamless, powerful.",
@@ -30,7 +30,7 @@ const All_Products = [
   {
     id: 3,
     name: "C to A Adapter ",
-    price: 1,
+    price: 9,
     src: "ctoaadaptor.png",
     type: "phone",
     shortDescription: "The new industry standard",
@@ -40,7 +40,7 @@ const All_Products = [
   {
     id: 4,
     name: "C to A Charging Cable",
-    price: 1,
+    price: 10,
     src: "ctoacable.png",
     type: "phone",
     shortDescription: "Quick and powerful.",
@@ -50,7 +50,7 @@ const All_Products = [
   {
     id: 5,
     name: "Nest Audio",
-    price: 1,
+    price: 50,
     src: "nestaudio.png",
     type: "home",
     shortDescription: "The way that sound should sound.",
@@ -60,7 +60,7 @@ const All_Products = [
   {
     id: 6,
     name: "Nest Aware",
-    price: 1,
+    price: 100,
     src: "nestaware.png",
     type: "home",
     shortDescription: "Don’t miss a thing with Google Nest Aware.",
@@ -70,7 +70,7 @@ const All_Products = [
   {
     id: 7,
     name: "Nest Cam",
-    price: 1,
+    price: 69,
     src: "nestcam.png",
     type: "home",
     shortDescription: "The battery-powered security camera with smarts.",
@@ -80,7 +80,7 @@ const All_Products = [
   {
     id: 8,
     name: "Nest Cam Charger Cable",
-    price: 1,
+    price: 10,
     src: "nestcamchargecable.png",
     type: "home",
     shortDescription: "A spare cable for the unexpected.",
@@ -90,7 +90,7 @@ const All_Products = [
   {
     id: 9,
     name: "Nest Mini",
-    price: 1,
+    price: 20,
     src: "nestmini.png",
     type: "home",
     shortDescription: "Engineered for sound.Designed for your home.",
@@ -100,7 +100,7 @@ const All_Products = [
   {
     id: 10,
     name: "Type C Earbuds",
-    price: 1,
+    price: 50,
     src: "typecearbuds.png",
     type: "phone",
     shortDescription: "Play more music.Get more done.",
