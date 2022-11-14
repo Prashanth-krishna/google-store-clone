@@ -13,7 +13,7 @@ function ProductDetail(props) {
   function AddToCartHandler() {
     CartCTX.addToCart({
       id: id,
-      price: 100,
+      price: product[0].price,
       quantity: 1,
     });
   }

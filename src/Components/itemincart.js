@@ -3,12 +3,12 @@ import Cart from "./store/context";
 function ItemInCart(props) {
   const CartCTX = useContext(Cart);
   function IncreaseQuantity() {
-    CartCTX.addToCart({
-      id: props.id,
-      price: props.price,
-      quantity: props.quantity,
-    });
-    console.log(CartCTX.items);
+    CartCTX.IncrementItem(props.id);
+    // console.log(CartCTX.items);
+  }
+  function DecreaseQuantity() {
+    CartCTX.DecrementItem(props.id);
+    // console.log(CartCTX.items);
   }
 
   return (
@@ -26,7 +26,7 @@ function ItemInCart(props) {
         <p>Quantity</p>
         <p>{props.quantity}</p>
         <button onClick={IncreaseQuantity}>+</button>
-        <button>-</button>
+        <button onClick={DecreaseQuantity}>-</button>
       </div>
       <div className="total">
         <p>Total</p>

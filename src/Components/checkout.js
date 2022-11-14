@@ -7,7 +7,8 @@ function Checkout(props) {
   const AllProducts = props.products;
   const CartCTX = useContext(Cart);
   const itemsArray = CartCTX.items;
-
+  let sum = 0;
+  itemsArray.forEach((item) => (sum += item.price * item.quantity));
   // console.log(itemsArray);
   if (itemsArray.length === 0) {
     return (
@@ -27,7 +28,7 @@ function Checkout(props) {
             (prod) => prod.id.toString() === item.id
           );
 
-          // console.log(product[0]);
+          // console.log(product[0].price);
           return (
             <ItemInCart
               price={product[0].price}
@@ -39,6 +40,11 @@ function Checkout(props) {
             />
           );
         })}
+        <p>Grand Total</p>
+        <span>${sum}</span>
+        <div className="btn">
+          <button>Buy Now</button>
+        </div>
       </div>
     );
   }
