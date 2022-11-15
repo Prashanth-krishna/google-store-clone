@@ -1,6 +1,6 @@
 import Card from "./card";
 
-function Products({ selected, products }) {
+function Products({ selected, products, TextToSearch }) {
   if (selected.includes("home") || selected.includes("phone")) {
     return products.map((item) => {
       if (selected.includes(item.type)) {

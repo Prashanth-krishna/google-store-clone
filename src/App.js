@@ -111,9 +111,13 @@ const All_Products = [
 
 function App() {
   const [selected, SetSelected] = useState([]);
+  const [searchText, SetSearchText] = useState("");
   const allselected = (select) => {
     SetSelected(select);
   };
+  function searchTextHandler(text) {
+    SetSearchText(text);
+  }
   return (
     <div className="App">
       <Routes>
@@ -138,12 +142,16 @@ function App() {
           path="/"
           element={
             <>
-              <Header />
+              <Header filter={searchTextHandler} />
               <aside>
                 <SideBar selectHandler={allselected} />
               </aside>
               <main>
-                <Products products={All_Products} selected={selected} />
+                <Products
+                  products={All_Products}
+                  selected={selected}
+                  TextToSearch={searchText}
+                />
               </main>
             </>
           }

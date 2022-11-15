@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import Cart from "./store/context";
 import { useState } from "react";
-function Header() {
+function Header(props) {
   const [searchvisible, SetSearchVisible] = useState(false);
   const CartCTX = useContext(Cart);
   const itemsArray = CartCTX.items;
@@ -20,6 +20,10 @@ function Header() {
   }
   function SearchDisbale() {
     SetSearchVisible(false);
+  }
+  function SearchTextHandler(e) {
+    const searchText = e.target.value;
+    props.filter(searchText);
   }
   return (
     <div className="header" id="header">
@@ -32,7 +36,7 @@ function Header() {
       <div className="optionsContainer">
         {searchvisible ? (
           <div className="searchBox">
-            <input type="text" />
+            <input type="text" onChange={SearchTextHandler} />
             <div className="closeIcon" onClick={SearchDisbale}>
               <CloseIcon
                 style={{ position: "absolute", top: "1px", right: "5px" }}
