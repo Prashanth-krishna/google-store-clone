@@ -3,15 +3,24 @@ import HelpIcon from "@mui/icons-material/Help";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import GoogleIcon from "@mui/icons-material/Google";
+import CloseIcon from "@mui/icons-material/Close";
 
 import "./header.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import Cart from "./store/context";
+import { useState } from "react";
 function Header() {
+  const [searchvisible, SetSearchVisible] = useState(false);
   const CartCTX = useContext(Cart);
   const itemsArray = CartCTX.items;
   const spanShow = itemsArray.length === 0;
+  function SearchHandler() {
+    SetSearchVisible(true);
+  }
+  function SearchDisbale() {
+    SetSearchVisible(false);
+  }
   return (
     <div className="header" id="header">
       <Link to="/" style={{ color: "black", textDecoration: "none" }}>
@@ -20,13 +29,29 @@ function Header() {
           <span>Store</span>
         </div>
       </Link>
-
       <div className="optionsContainer">
-        <div className="searchicon">
-          <SearchIcon />
-        </div>
+        {searchvisible ? (
+          <div className="searchBox">
+            <input type="text" />
+            <div className="closeIcon" onClick={SearchDisbale}>
+              <CloseIcon
+                style={{ position: "absolute", top: "1px", right: "5px" }}
+              />
+            </div>
+          </div>
+        ) : (
+          <div className="searchicon" onClick={SearchHandler}>
+            <SearchIcon />
+          </div>
+        )}
         <div className="helpicon">
-          <HelpIcon />
+          <a
+            href="https://support.google.com/store?p=store_nav&hl=en-GB"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <HelpIcon style={{ color: "black" }} />
+          </a>
         </div>
         <div className="accounticon">
           <AccountCircleIcon />

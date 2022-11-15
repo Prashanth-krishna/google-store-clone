@@ -47,3 +47,7 @@
   top: 0;
   right: 7px;
 }
+
+.header .optionsContainer .searchBox {
+  position: relative;
+}
