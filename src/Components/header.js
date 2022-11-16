@@ -25,6 +25,10 @@ function Header(props) {
     const searchText = e.target.value;
     props.filter(searchText);
   }
+  function LogoutHandler() {
+    CartCTX.Logout();
+    alert("You Logged Out succesfully.");
+  }
   return (
     <div className="header" id="header">
       <Link to="/" style={{ color: "black", textDecoration: "none" }}>
@@ -58,7 +62,13 @@ function Header(props) {
           </a>
         </div>
         <div className="accounticon">
-          <AccountCircleIcon />
+          {CartCTX.isLoggedIn ? (
+            <AccountCircleIcon onClick={LogoutHandler} />
+          ) : (
+            <Link to="/login">
+              <AccountCircleIcon style={{ color: "black" }} />
+            </Link>
+          )}
         </div>
         <div className="carticon">
           <Link to="/Checkout" style={{ color: "black" }}>

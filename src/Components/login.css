@@ -1,0 +1,23 @@
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.loginContainer .loginform form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.loginContainer .loginform form label {
+  text-align: start;
+  margin-top: 10px;
+}
+.loginContainer .loginform form input {
+  margin-top: 5px;
+}
+.loginContainer .loginform form button {
+  margin-top: 10px;
+}

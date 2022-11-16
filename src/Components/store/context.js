@@ -10,6 +10,8 @@ const Cart = createContext({
   IncrementItem: (itemId) => {},
   DecrementItem: (itemId) => {},
   EmptyCart: () => {},
+  Login: (username, password) => {},
+  Logout: () => {},
 });
 export function CartContextProvider(props) {
   const [itemsInCart, SetItemsInCart] = useState([]);
@@ -66,6 +68,9 @@ export function CartContextProvider(props) {
   function LoginHandler(username, password) {
     setIsLoggedIn(true);
   }
+  function LogoutHandler() {
+    setIsLoggedIn(false);
+  }
   const context = {
     items: itemsInCart,
     numberOfItems: itemsInCart.length,
@@ -76,6 +81,8 @@ export function CartContextProvider(props) {
     IncrementItem: IncrementItemHandler,
     DecrementItem: DecrementItemHandler,
     EmptyCart: EmptyCartHandler,
+    Login: LoginHandler,
+    Logout: LogoutHandler,
   };
 
   //   console.log(itemsInCart);
