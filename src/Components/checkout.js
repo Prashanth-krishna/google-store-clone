@@ -9,6 +9,10 @@ function Checkout(props) {
   const itemsArray = CartCTX.items;
   let sum = 0;
   itemsArray.forEach((item) => (sum += item.price * item.quantity));
+  function BuyHandler() {
+    alert("Successful! Your item will be delivered in 3-5 days");
+    CartCTX.EmptyCart();
+  }
   // console.log(itemsArray);
   if (itemsArray.length === 0) {
     return (
@@ -43,7 +47,13 @@ function Checkout(props) {
         <p>Grand Total</p>
         <span>${sum}</span>
         <div className="btn">
-          <button>Buy Now</button>
+          {CartCTX.isLoggedIn ? (
+            <button onClick={BuyHandler}>Buy Now</button>
+          ) : (
+            <Link to="/login">
+              <button>Buy Now</button>
+            </Link>
+          )}
         </div>
       </div>
     );

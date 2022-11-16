@@ -6,6 +6,7 @@ import Products from "./Components/products";
 import { Route, Routes } from "react-router-dom";
 import Checkout from "./Components/checkout";
 import ProductDetail from "./Components/productdetail";
+import Login from "./Components/login";
 const All_Products = [
   {
     id: 1,
@@ -138,6 +139,15 @@ function App() {
             />
           }
         ></Route>
+        <Route
+          path="/login"
+          element={
+            <>
+              <Header />
+              <Login />
+            </>
+          }
+        />
         <Route
           path="/"
           element={

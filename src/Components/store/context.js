@@ -3,14 +3,17 @@ import { useState, createContext } from "react";
 const Cart = createContext({
   items: [],
   numberOfItems: 0,
+  isLoggedIn: false,
   addToCart: (item) => {},
   removeFromCart: (itemId) => {},
   isInCart: (itemId) => {},
   IncrementItem: (itemId) => {},
   DecrementItem: (itemId) => {},
+  EmptyCart: () => {},
 });
 export function CartContextProvider(props) {
   const [itemsInCart, SetItemsInCart] = useState([]);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   function AddToCartHander(item) {
     SetItemsInCart((prevState) => {
@@ -57,14 +60,22 @@ export function CartContextProvider(props) {
       });
     }
   }
+  function EmptyCartHandler() {
+    SetItemsInCart([]);
+  }
+  function LoginHandler(username, password) {
+    setIsLoggedIn(true);
+  }
   const context = {
     items: itemsInCart,
     numberOfItems: itemsInCart.length,
+    isLoggedIn: isLoggedIn,
     addToCart: AddToCartHander,
     removeFromCart: RemoveFromCartHandler,
     isInCart: IsInCartChecker,
     IncrementItem: IncrementItemHandler,
     DecrementItem: DecrementItemHandler,
+    EmptyCart: EmptyCartHandler,
   };
 
   //   console.log(itemsInCart);
