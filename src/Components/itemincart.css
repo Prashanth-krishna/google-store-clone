@@ -1,10 +1,12 @@
 .quantity button {
-  background-color: rgb(26, 115, 232);
+  background-color: rgb(0, 101, 179);
   color: white;
-  border: none;
+  border: 1px solid rgb(0, 101, 185);
+  border-radius: 2px;
 }
 .quantity button:hover {
-  color: rgb(26, 115, 232);
+  color: rgb(0, 101, 179);
   background-color: white;
-  border: 1px solid rgb(26, 115, 232);
+  border: 1px solid rgb(0, 101, 185);
+  border-radius: 2px;
 }

@@ -1,14 +1,12 @@
 .detail button {
-  color: rgb(25, 29, 233);
-  background-color: rgb(98, 243, 188);
+  color: white;
+  background-color: #0065b3;
   outline: none;
-  border: 1px solid rgb(0, 255, 157);
-  padding: 5px 10px;
+  border: 1px solid rgb(0, 101, 185);
+  padding: 10px 15px;
+  border-radius: 2px;
 }
 .detail button:hover {
   cursor: pointer;
   transform: scale(1.05);
-  background-color: rgb(25, 29, 233);
-  color: rgb(98, 243, 188);
-  border: 1px solid rgb(25, 29, 233);
 }

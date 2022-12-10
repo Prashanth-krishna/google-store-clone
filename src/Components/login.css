@@ -20,4 +20,16 @@
 }
 .loginContainer .loginform form button {
   margin-top: 10px;
+  background-color: rgb(0, 101, 179);
+  color: white;
+  border: 1px solid rgb(0, 101, 185);
+  padding: 5px 10px;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+.loginContainer .loginform form button:hover {
+  color: rgb(0, 101, 179);
+  background-color: white;
+  border: 1px solid rgb(0, 101, 185);
+  border-radius: 2px;
 }

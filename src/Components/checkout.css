@@ -30,13 +30,19 @@
 }
 .checkoutEmptyContainer button {
   margin: 20px 5px;
-  background-color: rgb(50, 139, 241);
+  background-color: rgb(0, 101, 179);
   color: white;
-  border: none;
+  border: 1px solid rgb(0, 101, 185);
+  padding: 10px 15px;
+  border-radius: 2px;
 }
 .checkoutEmptyContainer button:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 0 2px rgb(0, 101, 185); */
+  color: rgb(0, 101, 179);
+  background-color: white;
+  border: 1px solid rgb(0, 101, 185);
+  border-radius: 2px;
 }
 .products .description {
   display: flex;
@@ -50,12 +56,16 @@
   margin: 10px 5px;
 }
 .checkoutContainer .btn button {
-  background-color: rgb(26, 115, 232);
+  background-color: rgb(0, 101, 179);
   color: white;
-  border: none;
+  border: 1px solid rgb(0, 101, 185);
+  padding: 5px 10px;
+  border-radius: 2px;
+  margin-top: 5px;
 }
 .checkoutContainer .btn button:hover {
-  color: rgb(26, 115, 232);
+  color: rgb(0, 101, 179);
   background-color: white;
-  border: 1px solid rgb(26, 115, 232);
+  border: 1px solid rgb(0, 101, 185);
+  border-radius: 2px;
 }
